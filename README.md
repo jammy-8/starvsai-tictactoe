@@ -25,7 +25,12 @@ Connect your GitHub repository and deploy as normal.
 
 ## Constraints
 
-The deployment terminal is set to 80 columns by 24 rows. That means that each line of text needs to be 80 characters or less otherwise it will be wrapped onto a second line.
+The deployment terminal is set to 80 columns by 24 rows. That means that each line of text needs to be 80 characters or less otherwise it will be wrapped onto a second line.  
+
+We have created a program to print the size of the deployment terminal to help you.
+You may wish to resize a terminal window to the size of the printed output.
+
+To run the program, use the command `python3 -m terminal_size`.
 
 -----
 Happy coding!

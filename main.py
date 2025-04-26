@@ -41,3 +41,15 @@ def free_cell(cell):
         return False
     return True
 
+print("Welcome to the Star vs AI !")
+print("")
+print_grid()
+print("")
+player1 = input("Please enter name of Star : ")
+player1_symbol = input("Please enter the symbol of Star : ")
+player2 = input("Please enter name of AI : ")
+player2_symbol = input("Please enter the symbol of AI : ")
+game = True
+full_grid = False
+turn_player1 = False
+winner = ""

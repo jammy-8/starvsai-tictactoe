@@ -22,3 +22,22 @@ def player_turn(turn_player1):
         print(f"It's {player1}'s turn")        
     return turn_player1
 
+def write_cell(cell):
+    cell -= 1
+    i = int(cell / 3)
+    j =  cell % 3   
+    if turn_player1 == True:
+        grid[i][j] = player1_symbol
+    else:
+        grid[i][j] = player2_symbol
+    return grid
+
+def free_cell(cell):
+    cell -= 1
+    i = int(cell / 3)
+    j =  cell % 3
+    if grid[i][j] == player1_symbol or grid[i][j] == player2_symbol:
+        print("This cell is not free")
+        return False
+    return True
+

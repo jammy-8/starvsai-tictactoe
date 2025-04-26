@@ -158,3 +158,12 @@ def win_check(grid, player1_symbol, player2_symbol):
          
             player1_symbol_count = 0
             player2_symbol_count = 0   
+        
+    if full_grid == True:
+        game = False
+        winner = ""
+        return game, winner
+    else:
+        game = True
+        winner = ""
+        return game, winner

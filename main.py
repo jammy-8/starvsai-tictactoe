@@ -53,3 +53,108 @@ game = True
 full_grid = False
 turn_player1 = False
 winner = ""
+
+def win_check(grid, player1_symbol, player2_symbol):
+    full_grid = True
+    player1_symbol_count = 0
+    player2_symbol_count = 0
+        
+    for i in range(3):
+        for j in range(3):
+            if grid[i][j] == player1_symbol:
+                player1_symbol_count += 1
+                player2_symbol_count = 0
+                if player1_symbol_count == 3:
+                    game = False
+                    winner = player1
+                    return game, winner
+            if grid[i][j] == player2_symbol:
+                player2_symbol_count += 1
+                player1_symbol_count = 0
+                if player2_symbol_count == 3:
+                    game = False
+                    winner = player2
+                    return game, winner
+            if grid[i][j] == " ":
+                full_grid = False
+                 
+        player1_symbol_count = 0
+        player2_symbol_count = 0
+    
+    player1_symbol_count = 0
+    player2_symbol_count = 0    
+    for i in range (3):
+        for j in range (3):
+            for k in range (3):
+                if i + k <= 2:
+                    if grid[i + k][j] == player1_symbol:
+                        player1_symbol_count += 1
+                        player2_symbol_count = 0
+                        if player1_symbol_count == 3:
+                            game = False
+                            winner = player1
+                            return game, winner
+                    if grid[i + k][j] == player2_symbol:
+                        player2_symbol_count += 1
+                        player1_symbol_count = 0
+                        if player2_symbol_count == 3:
+                            game = False
+                            winner = player2
+                            return game, winner
+            if grid[i][j] == " ":
+                full_grid = False
+ 
+            player1_symbol_count = 0
+            player2_symbol_count = 0
+    
+    player1_symbol_count = 0
+    player2_symbol_count = 0    
+    for i in range (3):
+        for j in range (3):
+            for k in range (3):
+                if j + k <= 2 and i + k <= 2:
+                    if grid[i + k][j + k] == player1_symbol:
+                        player1_symbol_count += 1
+                        player2_symbol_count = 0
+                        if player1_symbol_count == 3:
+                            game = False
+                            winner = player1
+                            return game, winner
+                    if grid[i + k][j + k] == player2_symbol:
+                        player2_symbol_count += 1
+                        player1_symbol_count = 0
+                        if player2_symbol_count == 3:
+                            game = False
+                            winner = player2
+                            return game, winner
+            if grid[i][j] == " ":
+                full_grid = False
+             
+            player1_symbol_count = 0
+            player2_symbol_count = 0
+             
+    player1_symbol_count = 0
+    player2_symbol_count = 0    
+    for i in range (3):
+        for j in range (3):
+            for k in range (3):
+                if j - k >= 0 and i + k <= 2:
+                    if grid[i + k][j - k] == player1_symbol:
+                        player1_symbol_count += 1
+                        player2_symbol_count = 0
+                        if player1_symbol_count == 3:
+                            game = False
+                            winner = player1
+                            return game, winner
+                    if grid[i + k][j - k] == player2_symbol:
+                        player2_symbol_count += 1
+                        player1_symbol_count = 0
+                        if player2_symbol_count == 3:
+                            game = False
+                            winner = player2
+                            return game, winner
+            if grid[i][j] == " ":
+                full_grid = False
+         
+            player1_symbol_count = 0
+            player2_symbol_count = 0   

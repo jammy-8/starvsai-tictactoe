@@ -174,10 +174,12 @@ while game == True:
     while free_box == False:
         cell = int(input("Please enter a number for your case (1 to 9 from left to right and from top to bottom) : "))
         free_box = free_cell(cell)
-    grid = write_cell(cell)
+    grid = write_cell(cell) 
+    print("")
     print_grid()
     game, winner = win_check(grid, player1_symbol, player2_symbol)
-     
+    if game == False:
+        break
 
 if winner == player1:
     print(f"Winner is {player1} !")

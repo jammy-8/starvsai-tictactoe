@@ -32,7 +32,7 @@ def write_cell(cell):
         grid[i][j] = player2_symbol
     return grid
 
-def free_cell(cell):
+def free_cell(cell):  # sourcery skip: merge-comparisons
     cell -= 1
     i = int(cell / 3)
     j =  cell % 3

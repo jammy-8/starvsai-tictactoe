@@ -32,7 +32,7 @@ def write_cell(cell):
         grid[i][j] = player2_symbol
     return grid
 
-def free_cell(cell):  # sourcery skip: merge-comparisons
+def free_cell(cell):
     cell -= 1
     i = int(cell / 3)
     j =  cell % 3
@@ -174,7 +174,7 @@ while game == True:
     while free_box == False:
         cell = int(input("Please enter a number for your case (1 to 9 from left to right and from top to bottom) : "))
         free_box = free_cell(cell)
-    grid = write_cell(cell)  # type: ignore # type: ignore
+    grid = write_cell(cell) 
     print("")
     print_grid()
     game, winner = win_check(grid, player1_symbol, player2_symbol)
